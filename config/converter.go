@@ -25,8 +25,9 @@ const (
 )
 
 var DefaultCommon = Common{
-	Enum:            enum.Config{Enabled: true},
-	ArgContextRegex: regexp.MustCompile("^ctx|^context"),
+	Enum:             enum.Config{Enabled: true},
+	ArgContextRegex:  regexp.MustCompile("^ctx|^context"),
+	DeepCopySameType: true,
 }
 
 var DefaultConfigInterface = ConverterConfig{

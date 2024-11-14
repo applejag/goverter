@@ -1,7 +1,7 @@
 package example
 
 // goverter:converter
-// goverter:skipCopySameType
+// goverter:deepCopySameType no
 type Converter interface {
 	Convert(source Input) Output
 }

@@ -14,7 +14,7 @@ type Common struct {
 	IgnoreUnexported                   bool
 	MatchIgnoreCase                    bool
 	IgnoreMissing                      bool
-	SkipCopySameType                   bool
+	DeepCopySameType                   bool
 	UseZeroValueOnPointerInconsistency bool
 	UseUnderlyingTypeMethods           bool
 	ArgContextRegex                    *regexp.Regexp
@@ -43,7 +43,11 @@ func parseCommon(c *Common, cmd, rest string) (fieldSetting bool, err error) {
 		fieldSetting = true
 		c.IgnoreMissing, err = parseBool(rest)
 	case "skipCopySameType":
-		c.SkipCopySameType, err = parseBool(rest)
+		var value bool
+		value, err = parseBool(rest)
+		c.DeepCopySameType = !value
+	case "deepCopySameType":
+		c.DeepCopySameType, err = parseBool(rest)
 	case "useZeroValueOnPointerInconsistency":
 		c.UseZeroValueOnPointerInconsistency, err = parseBool(rest)
 	case "useUnderlyingTypeMethods":

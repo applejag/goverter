@@ -3,12 +3,12 @@
 
 package generated
 
-import skipcopysametype "github.com/jmattheis/goverter/example/skip-copy-same-type"
+import skipdeepcopysametype "github.com/jmattheis/goverter/example/skip-deep-copy-same-type"
 
 type ConverterImpl struct{}
 
-func (c *ConverterImpl) Convert(source skipcopysametype.Input) skipcopysametype.Output {
-	var exampleOutput skipcopysametype.Output
+func (c *ConverterImpl) Convert(source skipdeepcopysametype.Input) skipdeepcopysametype.Output {
+	var exampleOutput skipdeepcopysametype.Output
 	exampleOutput.Name = source.Name
 	exampleOutput.ItemCounts = source.ItemCounts
 	return exampleOutput

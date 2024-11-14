@@ -16,7 +16,7 @@ type Config struct {
 // BuildSteps that'll used for generation.
 var BuildSteps = []builder.Builder{
 	&builder.UseUnderlyingTypeMethods{},
-	&builder.SkipCopy{},
+	&builder.SkipDeepCopy{},
 	&builder.Enum{},
 	&builder.BasicTargetPointerRule{},
 	&builder.Pointer{},

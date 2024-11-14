@@ -8,20 +8,19 @@ input:
         }
 
         // goverter:converter
-        // goverter:skipCopySameType yes
+        // goverter:deepCopySameType no
         type KeepsGlobalValue interface {
             Enabled(*string) *string
         }
 
-
         // goverter:converter
-        // goverter:skipCopySameType no
+        // goverter:deepCopySameType yes
         type DisablesGlobal interface {
             Disabled(*int) *int
         }
 
         // goverter:converter
-        // goverter:skipCopySameType no
+        // goverter:deepCopySameType yes
         type EnableInSubMethod interface {
             Disable(*string) *string
             // goverter:skipCopySameType
@@ -31,7 +30,7 @@ input:
         // goverter:converter
         type DisableInSubMethod interface {
             Enabled(*string) *string
-            // goverter:skipCopySameType no
+            // goverter:deepCopySameType yes
             Disable(*int) *int
         }
 global:

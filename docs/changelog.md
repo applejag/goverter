@@ -12,6 +12,8 @@ import GH from './GH.vue';
   - Add [`arg:context:regex`](./reference/arg.md)
 - Error on duplicated converter signatures. <GH issue="146" pr="166"/>
 - Fix panic when using `chan` in conversion functions. <GH issue="165" pr="167"/>
+- Deprecate [`skipCopySameType`](./reference/skipCopySameType.md), use
+  [`deepCopySameType no`](./reference/deepCopySameType.md) instead.
 
 ## v1.5.1
 

@@ -45,12 +45,13 @@ These settings can be defined as [CLI argument](./define-settings.md#cli),
 [inheritable](./define-settings.md#inheritance).
 
 - [`arg:context:regex REGEX` set context param regex](./arg.md#arg-context-regex)
+- [`deepCopySameType [yes,no]` toggle deep copying](./deepCopySameType.md)
 - [`enum:unknown ACTION|KEY` handle unexpected enum values](./enum.md#enum-unknown-action)
 - [`ignoreMissing [yes,no]` ignore missing struct fields](./ignoreMissing.md) 
 - [`ignoreUnexported [yes,no]` ignore unexported struct fields](./ignoreUnexported.md)
 - [`matchIgnoreCase [yes,no]` case-insensitive field matching](./matchIgnoreCase.md)
-- [`skipCopySameType [yes,no]` skip copying types when the source and target type are the same](./skipCopySameType.md)
 - [`useUnderlyingTypeMethods [yes|no]` use underlying types when looking for existing methods](./useUnderlyingTypeMethods.md)
 - [`useZeroValueOnPointerInconsistency [yes|no]` Use zero values for `*S` to `T` conversions](./useZeroValueOnPointerInconsistency.md)
 - [`wrapErrorsUsing [PACKAGE]` wrap errors using a custom implementation](./wrapErrorsUsing.md)
 - [`wrapErrors [yes,no]` wrap errors with extra information](./wrapErrors.md)
+- _DEPRECATED_: [`skipCopySameType [yes,no]` skip copying types when the source and target type are the same](./skipCopySameType.md)
